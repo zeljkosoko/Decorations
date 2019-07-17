@@ -1,0 +1,11 @@
+<app-shopping-edit></app-shopping-edit>
+<hr>
+<div class="row">
+  <div class="col-md-10">
+    <ul class="list-group">
+      <a *ngFor="let element of elements" class="list-group-item clearfix" href="#">
+        {{element.name}} ({{element.amount}})
+      </a>
+    </ul>
+  </div>
+</div>
