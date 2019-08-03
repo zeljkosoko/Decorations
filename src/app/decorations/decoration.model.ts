@@ -10,3 +10,6 @@ export class Decoration {
         this.imagePath = imagePath;
     }
 }
+//Model created by simply way: right click on folder>add new file: "decoration.model.ts"
+//or 
+//ng generate class decoration.model.ts in folder
