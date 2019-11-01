@@ -1,11 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Decoration } from "../decoration.model";
+
 @Component({
   selector: 'app-decoration-list',
   templateUrl: './decoration-list.component.html',
   styleUrls: ['./decoration-list.component.css']
 })
 export class DecorationListComponent implements OnInit {
+
+  @Output() forwardSelectedDecoration = new EventEmitter<Decoration>(); //forward to decorations.component
 
   decorations: Decoration[] = [
     new Decoration('Home','Best place to get peace and relaxation is nature and for this planting a garden or planting trees at home are required.','https://decorationideas.files.wordpress.com/2010/08/terrace-garden.jpg'),
@@ -16,4 +19,7 @@ export class DecorationListComponent implements OnInit {
   ngOnInit() {
   }
 
+  onSelectedDecoration(oneSelected: Decoration) {
+    this.forwardSelectedDecoration.emit(oneSelected);
+  }
 }

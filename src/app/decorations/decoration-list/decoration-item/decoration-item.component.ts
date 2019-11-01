@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Decoration } from '../../decoration.model';
 
 @Component({
   selector: 'app-decoration-item',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./decoration-item.component.css']
 })
 export class DecorationItemComponent implements OnInit {
+  @Input() inputDecoration: Decoration;
+
+  @Output() selectedDecoration = new EventEmitter<any>(); //forward to decoration-list.component
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  onSelectDecoration() {
+    this.selectedDecoration.emit();
+  }
 }

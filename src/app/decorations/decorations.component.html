@@ -1,8 +1,13 @@
 <div class="row">
   <div class="col-md-7">
-    <app-decoration-list></app-decoration-list>
+    <app-decoration-list (forwardSelectedDecoration)="getSelectedDecoration($event)" ></app-decoration-list>
   </div>
   <div class="col-md-5">
-    <app-decoration-details></app-decoration-details>
+    <app-decoration-details 
+       *ngIf="decoration; else noDecoration"
+       [inputDecoration]="decoration"></app-decoration-details>
+    <ng-template #noDecoration>
+      <p>Please, select one decoration.</p>
+    </ng-template>
   </div>
 </div>

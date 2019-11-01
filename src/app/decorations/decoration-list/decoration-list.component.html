@@ -3,26 +3,15 @@
     <button class="btn btn-success">New Decoration</button>
     <hr>
     <ul class="list-group">
-      <a *ngFor="let decoration of decorations" href="#" class="list-group-item clearfix">
-        
-        <div class="row">
-          
-          <div class="col-md-10">
-              <h4 class="list-group-heading">{{decoration.name}}</h4>
-              <p class="list-group-text">{{decoration.description}}</p>
-          </div>
-          <div class="col-md-2">
-              <img
-              [src]="decoration.imagePath"
-              class="img-responsive"
-              style="width: 50px; height: 50px;"
-              alt="image">
-          </div>
-        </div>
-       
-      </a>
+
+        <app-decoration-item 
+        *ngFor="let decoration of decorations"
+        [inputDecoration]="decoration"
+        (selectedDecoration)="onSelectedDecoration(decoration)">
+        </app-decoration-item>
+
     </ul>
     
   </div>
 </div>
-<app-decoration-item></app-decoration-item>
+

@@ -1,3 +1,15 @@
-<p>
-  decoration-item works!
-</p>
+<a  href="#" class="list-group-item clearfix"(click)="onSelectDecoration()" >  
+    <div class="row">
+      <div class="col-md-10">
+          <h4 class="list-group-heading">{{inputDecoration.name}}</h4>
+          <p class="list-group-text">{{inputDecoration.description}}</p>
+      </div>
+      <div class="col-md-2">
+          <img
+          [src]="inputDecoration.imagePath"
+          class="img-responsive"
+          style="width: 50px; height: 50px;"
+          alt="image">
+      </div>
+    </div>
+  </a>

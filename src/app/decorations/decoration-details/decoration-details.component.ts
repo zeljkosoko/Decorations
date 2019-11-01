@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Decoration } from '../decoration.model';
 
 @Component({
   selector: 'app-decoration-details',
@@ -6,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./decoration-details.component.css']
 })
 export class DecorationDetailsComponent implements OnInit {
-
+  @Input() inputDecoration: Decoration;
+  
   constructor() { }
 
   ngOnInit() {
