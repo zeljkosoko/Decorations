@@ -8,13 +8,23 @@
         <div class="col-sm-7">
           <div class="form-group">
             <label for="name">Name</label>
-            <input type="text" class="form-control" id="name">
+            <input 
+              type="text" 
+              class="form-control" 
+              id="name"
+              #inputName
+              >
           </div>
         </div>
         <div class="col-sm-5">
           <div class="form-group">
             <label for="amount">Amount</label>
-            <input type="text" class="form-control" id="amount">
+            <input 
+              type="text" 
+              class="form-control" 
+              id="amount"
+              #inputAmount
+              >
           </div>
         </div>
 
@@ -22,7 +32,7 @@
 
       <div class="row">
         <div class="col-md-12">
-          <button class="btn btn-success">Add</button>
+          <button class="btn btn-success" (click)="onAddElement()">Add</button>
           <button class="btn btn-danger">Delete</button>
           <button class="btn btn-primary">Clear</button>
         </div>
