@@ -8,7 +8,7 @@ import { Element } from "../../shared/element.model";
 })
 export class ShoppingEditComponent implements OnInit {
 
-  //local references with @ViewChild
+  //local references with @ViewChild to input ids 
   @ViewChild('inputName') inputNameReference: ElementRef;
   @ViewChild('inputAmount') inputAmountReference: ElementRef;
 

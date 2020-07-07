@@ -8,7 +8,7 @@ import { Element } from "../shared/element.model";
 export class ShoppingListComponent implements OnInit {
 
   elements: Element[] = [
-    new Element('Wood chairs',3),
+    new Element('Wood chairs', 3),
     new Element('Planting trees', 8)
   ];
   
